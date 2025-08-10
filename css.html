@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .backgrounddd {
+        background-image: url(image2.png);
+        background-size: cover;
+        height: 100dvh;
+        width: 100dvw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        background-color: white;
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 25px;
+        box-shadow: 5px 5px 10px gray;
+      }
+      .card {
+        width: 400px;
+        height: 270px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.5),
+          inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+          inset 0 0 4px 2px rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.8),
+          transparent
+        );
+      }
+
+      .card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.8),
+          transparent,
+          rgba(255, 255, 255, 0.3)
+        );
+      }
+
+
+      .checkboxes {
+        width: 300px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.5),
+          inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+          inset 0 0 4px 2px rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .checkboxes::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.8),
+          transparent
+        );
+      }
+
+      .checkboxes::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.8),
+          transparent,
+          rgba(255, 255, 255, 0.3)
+        );
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .checkboxes {
+        font-size: 20px;
+        border: 1px solid black;
+        border-radius: 25px;
+        padding: 5px 20px;
+        box-shadow: 5px 5px 10px black;
+      }
+      .button1 {
+        background-color: green;
+        border: 2px solid green;
+        border-radius: 25px;
+        padding: 10px 20px;
+        box-shadow: 5px 5px 10px black;
+        cursor: pointer;
+      }
+      .button2 {
+        background-color: red;
+        border: 2px solid red;
+        border-radius: 25px;
+        padding: 10px 20px;
+        box-shadow: 5px 5px 10px black;
+        cursor: pointer;
+      }
+      h1 {
+        text-shadow: 5px 5px 10px black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="backgrounddd">
+      <div class="card">
+        <form>
+          <h1>Login Page</h1>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Your Email"
+            class="checkboxes"
+          /><br /><br />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter Your Password"
+            class="checkboxes"
+          /><br /><br />
+          <div class="buttons">
+            <input type="submit" value="Submit" class="button1" />
+            <input type="reset" value="Reset" class="button2" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
